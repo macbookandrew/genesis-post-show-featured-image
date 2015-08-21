@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Genesis Post Show Featured Image
  * Plugin URI: https://github.com/macbookandrew/genesis-post-show-featured-image
- * Description: Show post featured image after the title
+ * Description: Show post featured image after the title and before any content
  * Version: 1.0
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
@@ -22,8 +22,7 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-add_action( 'genesis_after_post_title', 'featured_post_image', 8 );
-function featured_post_image() {
-  if ( ! is_singular( 'post' ) )  return;
-	the_post_thumbnail('post-image');
+add_action( 'genesis_entry_content', 'armd_add_featured_image', 8 );
+function armd_add_featured_image( $post ) {
+    the_post_thumbnail();
 }
