@@ -24,5 +24,6 @@
 
 add_action( 'genesis_entry_content', 'armd_add_featured_image', 8 );
 function armd_add_featured_image( $post ) {
-    the_post_thumbnail();
+    if ( ! is_singular( 'post' ) )  return;
+    the_post_thumbnail( 'large', array( 'class' => 'entry-image post-image' ) );
 }
