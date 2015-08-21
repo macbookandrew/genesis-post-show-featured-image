@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: GHC Functionality
+ * Plugin Name: Genesis Post Show Featured Image
  * Plugin URI: https://github.com/macbookandrew/genesis-post-show-featured-image
  * Description: Show post featured image after the title
  * Version: 1.0
